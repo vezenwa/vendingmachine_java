@@ -4,7 +4,7 @@ import java.util.Scanner;
  *The vending machine class shows the items and money used to process the vending machine
  * It also performs the buy and sell process that is carried out between the vending machine and costumer
  * Arrays and method calling were used to carry out this transaction
- * @author musawatfa
+ * @author ValentineEzenwa
  */
 public class VendingMachine
 {
