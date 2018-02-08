@@ -1,0 +1,52 @@
+import java.util.Scanner;
+/**
+ *The main class displays the main menu options the costumer uses
+ * This helps the costumer to easily navigate the vending machine 
+ * @author musawatfa
+ */ 
+
+public class VendingMachineSimulation 
+{
+    public static void main(String[] args)
+    {
+	VendingMachine v = new VendingMachine();
+	Scanner in = new Scanner(System.in);
+	boolean done = false;
+	
+        //Costumer views main menu
+	while(!done)
+	{
+	    System.out.println();
+            System.out.println(" Enter 'A' to view available items");
+            System.out.println(" Enter 'V' to view money available");
+            System.out.println(" Enter 'B' to buy an item");
+            System.out.println(" Enter 'Q' to quit");
+	    String input = in.next();  
+			
+	    if (input.equalsIgnoreCase("A"))
+	    {
+		System.out.println("Available Items:");
+		v.displayInv();
+		done = false;
+	    }
+			
+	    else if (input.equalsIgnoreCase("V"))
+	    {
+                v.displayCurrency();
+                done = false;
+	    }
+			
+	    else if (input.equalsIgnoreCase("B"))
+	    {
+		v.displayInv();
+		v.moneyUsed();
+		done = false;
+	    }
+	    else if(input.equalsIgnoreCase("Q"))
+	    {
+		System.out.println("bye");
+		done = true;
+	    }
+	}	
+    }
+} 
